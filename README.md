@@ -1,5 +1,12 @@
 # Parlance — Speech/Text to Indian Sign Language (ISL) Translator
 
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript)
+![Tailwind](https://img.shields.io/badge/Tailwind-4-06B6D4?logo=tailwindcss)
+![Tests](https://img.shields.io/badge/tests-164%20passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 Parlance converts spoken or typed English/Hindi into Indian Sign Language, signed live by a 3D avatar in the browser. Built for accessibility-first communication.
 
 ## Demo
@@ -40,16 +47,47 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Optional: copy `.env.example` to `.env.local` and set `GEMINI_API_KEY` (get one at https://aistudio.google.com/apikey) to enable the online translator. Without it, the app still works via the offline fallback.
 
-## Tech stack
+## Available Scripts
 
-Next.js 16 · React 19 · TypeScript · react-three-fiber / three.js · Tailwind CSS · Google Gemini API
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm start` | Run production server |
+| `npm run typecheck` | TypeScript type checking |
+| `npm test` | Run all 164 tests |
+| `npm run coverage:sign` | Generate ISL vocabulary coverage report |
+| `npm run check` | Full CI pipeline (coverage + typecheck + tests + build) |
 
-## Project structure
+## Tech Stack
 
-- `app/` — Next.js app router pages and API routes
+- **Framework**: Next.js 16 (App Router, Turbopack)
+- **UI**: React 19, Tailwind CSS 4, shadcn/ui, Motion
+- **3D**: react-three-fiber, three.js, @react-three/drei
+- **ML/Computer Vision**: MediaPipe (hand/gesture/pose), @mediapipe/tasks-vision
+- **AI**: Google Gemini API (@google/genai)
+- **Testing**: Node.js native test runner, Playwright
+
+## Project Structure
+
+- `app/` — Next.js App Router pages and API routes
 - `components/avatar/` — 3D avatar, sign animations, gloss/text conversion
 - `components/sign/` — Camera-based sign recognition, training studio, validation
-- `lib/` — ISL translation logic, vocabulary, live speech, local auth
+- `components/ui/` — Base UI components (shadcn)
+- `lib/` — ISL translation logic, vocabulary, live speech, local auth, sign tracking
 - `scripts/` — Vocabulary coverage generation, evaluation, data prep
 - `test/` — Unit and integration tests for translation, recognition, auth
+- `public/models/` — ISL vocabulary, temporal forest, word samples, YBot GLB
+- `public/mediapipe/` — MediaPipe task files and WASM binaries
 
+## Accessibility
+
+- Semantic HTML5, ARIA labels throughout
+- Keyboard-operable controls, visible focus states
+- `prefers-reduced-motion` support (disables marquee, scroll animations, pulse effects)
+- Sufficient contrast (cream/dark theme)
+- Skip-to-content link, live regions for avatar status
+
+## License
+
+MIT — see [LICENSE](LICENSE) for details.
