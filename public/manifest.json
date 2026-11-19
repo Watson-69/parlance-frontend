@@ -1,0 +1,22 @@
+{
+  "name": "Parlance",
+  "short_name": "Parlance",
+  "description": "Speech/Text to Indian Sign Language (ISL) Translator",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f1e9",
+  "theme_color": "#f5f1e9",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/parlance-logo-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    }
+  ]
+}
