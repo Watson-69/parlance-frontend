@@ -88,6 +88,3 @@ Optional: copy `.env.example` to `.env.local` and set `GEMINI_API_KEY` (get one 
 - Sufficient contrast (cream/dark theme)
 - Skip-to-content link, live regions for avatar status
 
-## License
-
-MIT — see [LICENSE](LICENSE) for details.
