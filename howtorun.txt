@@ -1,0 +1,24 @@
+PARLANCE - How to run
+
+This is a static website (HTML, CSS, JavaScript). No build step or dependencies required.
+
+Option 1 - Open directly
+  Double-click index.html to open it in your default browser.
+
+Option 2 - Local server (recommended, avoids some browser restrictions)
+  Python 3:
+    cd "PARLANCE"
+    python -m http.server 8000
+  Then open http://localhost:8000 in your browser.
+
+  Node (if installed):
+    npx serve .
+
+  Or use VS Code "Live Server" extension on index.html.
+
+Accessibility notes:
+  - Keyboard: Tab through navigation, buttons, input, quick phrases. Enter plays.
+  - Reduced motion: respects prefers-reduced-motion.
+  - Focus states visible.
+
+Branding: Parlance. Visual/component inspiration: https://kokonutui.com/
