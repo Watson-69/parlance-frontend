@@ -53,6 +53,3 @@ Next.js 16 · React 19 · TypeScript · react-three-fiber / three.js · Tailwind
 - `scripts/` — Vocabulary coverage generation, evaluation, data prep
 - `test/` — Unit and integration tests for translation, recognition, auth
 
-## Team
-
-Built by Mitarth Pathak, Navneet Singh, Gaurav Soni, Deep Panchal, and Nooren Qureshi.
