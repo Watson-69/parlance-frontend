@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: 'Parlance — Language, without limits',
   description: 'Parlance translates spoken language into Indian Sign Language, making more conversations possible.',
   generator: 'v0.app',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+  },
 }
 
 export const viewport: Viewport = {
